@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="52b1737f-793a-4302-a182-5d2a76485d3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/bluecup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/browndoor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/collect.ogg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/enemy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/explosion.ogg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/greencup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/player-particle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/player.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/power.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/preloader-bar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/rock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/space.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/tiles.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/Boot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/Game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/MainMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/Preload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/asset licenses.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asteroids.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asteroids/boot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/topDown/boot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asteroids/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/topDown/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/tilemaps/level1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/tilemaps/level1.tmx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asteroids/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/topDown/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asteroids/mainMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/map.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/tilemaps/map.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spacehipster/js/phaser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/asteroids/preload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/topDown/preload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/topDownGame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game/game.js" afterPath="$PROJECT_DIR$/lib/game/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/topDown/game.js" afterPath="$PROJECT_DIR$/lib/topDown/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/tilemaps/map.json" afterPath="$PROJECT_DIR$/assets/tilemaps/map.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jspm.iws" />
@@ -89,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/lib/topDown/preload.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="37" />
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -98,8 +61,8 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/topDown/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39317182" vertical-offset="1122" max-vertical-offset="3043">
-              <caret line="87" column="65" selection-start-line="87" selection-start-column="65" selection-end-line="87" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.41107383" vertical-offset="2339" max-vertical-offset="3298">
+              <caret line="152" column="61" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -150,8 +113,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="54" />
     <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -274,19 +237,27 @@
       <option name="number" value="Default" />
       <updated>1441736658655</updated>
     </task>
+    <task id="LOCAL-00001" summary="added first porotype">
+      <created>1442351566899</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1442351566899</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="false" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18246187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26131046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -335,6 +306,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="added first porotype" />
+    <option name="LAST_COMMIT_MESSAGE" value="added first porotype" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -696,15 +669,15 @@
     <entry file="file://$PROJECT_DIR$/lib/topDown/preload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="37" />
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/topDown/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39317182" vertical-offset="1122" max-vertical-offset="3043">
-          <caret line="87" column="65" selection-start-line="87" selection-start-column="65" selection-end-line="87" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.41107383" vertical-offset="2339" max-vertical-offset="3298">
+          <caret line="152" column="61" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
           <folding />
         </state>
       </provider>
