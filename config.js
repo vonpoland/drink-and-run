@@ -17,6 +17,7 @@ System.config({
     "babel": "npm:babel-core@5.8.23",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "core-js": "npm:core-js@1.1.4",
+    "expect": "npm:expect.js@0.3.1",
     "expect.js": "npm:expect.js@0.3.1",
     "photonstorm/phaser": "github:photonstorm/phaser@2.4.3",
     "ramda": "npm:ramda@0.17.1",

@@ -2,9 +2,7 @@
 import expect from 'expect.js';
 import sinon from 'sinon';
 import R from 'ramda';
-import ChaseObjectEngined from '../../../lib/topDown/game/engine/ChaseObjectEngine';
-import MoveOnTilesEngine from '../../../lib/topDown/game/engine/MoveOnTilesEngine';
-import RandomMoveEngine from '../../../lib/topDown/game/engine/RandomMoveEngine';
+import {moveOnTileStrategy, chaseObjectStrategy, randomMoveStrategy} from '../../../lib/topDown/game/moveStrategies';
 import {createMoveableObject} from '../../../lib/topDown/objectsFactory/objectsFactory';
 
 const TILE_SIZE = 30;
@@ -36,12 +34,9 @@ function getGameMock(options) {
 function getMoveableObject(options) {
 	return createMoveableObject(getGameMock(options), {
 		sprite: options.sprite || 'sprite',
-		moveEngine: {
-			type: MoveOnTilesEngine,
-			options: {
-				tileSize: TILE_SIZE
-			}
-		}
+		tileSize: TILE_SIZE,
+		moveStrategies: [moveOnTileStrategy],
+		direction: options.direction || 'down'
 	});
 }
 
@@ -53,18 +48,17 @@ describe('ChaseObjectEngine', function () {
 				x: 90,
 				y: 60
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 			target.changeDirection(); // go left
 			target.changeDirection(); // go up
 			target.changeDirection(); // right
 
 			// when
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 90,
 				y: 30
+			}, {
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -78,15 +72,14 @@ describe('ChaseObjectEngine', function () {
 				x: 90,
 				y: 120
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 90,
 				y: 30
+			},{
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -100,15 +93,14 @@ describe('ChaseObjectEngine', function () {
 				x: 150,
 				y: 30
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 90,
 				y: 30
+			}, {
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -122,15 +114,14 @@ describe('ChaseObjectEngine', function () {
 				x: 0,
 				y: 30
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 90,
 				y: 30
+			}, {
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -146,16 +137,15 @@ describe('ChaseObjectEngine', function () {
 				x: 120,
 				y: 30
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
 			target.changeDirection(); // go left
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 90,
 				y: 90
+			}, {
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -170,16 +160,15 @@ describe('ChaseObjectEngine', function () {
 				x: 120,
 				y: 60
 			});
-			const obj = new ChaseObjectEngined({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
 			target.changeDirection(); // go left
-			const result = obj.nextPosition({
+			const result = chaseObjectStrategy({
 				x: 120,
 				y: 90
+			},{
+				target: target,
+				tileSize: TILE_SIZE
 			});
 
 			// then
@@ -195,22 +184,25 @@ describe('ChaseObjectEngine', function () {
 				x: 120,
 				y: 60
 			});
-			const obj = new RandomMoveEngine({
-				tileSize: TILE_SIZE,
-				target: target
-			});
 
 			// when
 			const result = [];
 			for(var i = 0; i < 20; i++) {
-				result.push(obj.nextPosition({
+				result.push(randomMoveStrategy({
 					x: 90,
 					y: 60
+				},{
+					target: target,
+					tileSize: TILE_SIZE,
+					previousPosition: {
+						x: 90,
+						y: 60
+					}
 				}));
 			}
 
 			expect(R.any(R.propEq('x', 90), result)).to.be(true);
-			expect(R.any(R.propEq('x', 120), result)).to.be(true);
+			expect(R.any(R.propEq('y', 60), result)).to.be(true);
 		});
 	});
 });

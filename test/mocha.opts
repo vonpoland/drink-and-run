@@ -1,4 +1,4 @@
 test/**/*.spec.js
 --check-leaks
---reporter dot
+--reporter nyan
 --compilers js:babel/register
