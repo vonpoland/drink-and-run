@@ -1,0 +1,69 @@
+/* globals describe, it */
+
+import expect from 'expect.js';
+import {findOtherWayStrategy} from '../../../../lib/topDown/game/moveStrategies';
+
+describe('It should if it finds path correctly', function() {
+	it('Should find way to move next to wall - custom wall 2', function () {
+		/** map
+		 *x/y012345678
+		 *  0*********
+		 *  1*t------*
+		 *  2*---*---*
+		 *  3*---*---*
+		 *  4*---*x--*
+		 *  5*********
+		 *  x -> policeman
+		 *  t -> target
+		 *  *** wall
+		 */
+		// given
+		const map = {
+			getTileWorldXY: function (x, y) {
+				if(x === 4 && [2, 3, 4].indexOf(y) >= 0) {
+					return true;
+				}
+				else if(y === 0 || y === 5) {
+					return true;
+				}
+				else if(x === 0 || x === 8) {
+					return true;
+				}
+
+				return false;
+			}
+		};
+
+		// given
+		let options = {
+			target: {
+				position: {
+					x: 1,
+					y: 1
+				}
+			},
+			tileSize: 1,
+			map: map
+		};
+		let results = [];
+
+		//when
+		let step = findOtherWayStrategy({
+			x: 5,
+			y: 4
+		}, options);
+
+		results.push(step);
+		step = findOtherWayStrategy(step, options);
+		results.push(step);
+
+		// then
+		expect(results).to.eql([{
+			x: 5,
+			y: 3
+		}, {
+			x: 5,
+			y: 2
+		}]);
+	});
+});

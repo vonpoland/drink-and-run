@@ -40,6 +40,19 @@ function getMoveableObject(options) {
 	});
 }
 
+const map = {
+	getTileWorldXY: function (x, y) {
+		if (y === 0 || y === 5000) {
+			return true;
+		}
+		else if (x === 0 || x === 8000) {
+			return true;
+		}
+
+		return false;
+	}
+};
+
 describe('ChaseObjectEngine', function () {
 	describe('#nextPostion() -- moves down', function () {
 		it('should change increase y coordinate by tile size', function () {
@@ -57,6 +70,7 @@ describe('ChaseObjectEngine', function () {
 				x: 90,
 				y: 30
 			}, {
+				map: map,
 				target: target,
 				tileSize: TILE_SIZE
 			});
@@ -77,8 +91,9 @@ describe('ChaseObjectEngine', function () {
 			const result = chaseObjectStrategy({
 				x: 90,
 				y: 30
-			},{
+			}, {
 				target: target,
+				map: map,
 				tileSize: TILE_SIZE
 			});
 
@@ -100,6 +115,7 @@ describe('ChaseObjectEngine', function () {
 				y: 30
 			}, {
 				target: target,
+				map: map,
 				tileSize: TILE_SIZE
 			});
 
@@ -121,6 +137,7 @@ describe('ChaseObjectEngine', function () {
 				y: 30
 			}, {
 				target: target,
+				map: map,
 				tileSize: TILE_SIZE
 			});
 
@@ -145,9 +162,10 @@ describe('ChaseObjectEngine', function () {
 				y: 90
 			}, {
 				target: target,
+				map: map,
 				tileSize: TILE_SIZE
 			});
-
+			console.info(result);
 			// then
 			expect(result.x).to.be(90);
 			expect(result.y).to.be(60);
@@ -166,8 +184,9 @@ describe('ChaseObjectEngine', function () {
 			const result = chaseObjectStrategy({
 				x: 120,
 				y: 90
-			},{
+			}, {
 				target: target,
+				map: map,
 				tileSize: TILE_SIZE
 			});
 
@@ -177,8 +196,8 @@ describe('ChaseObjectEngine', function () {
 		});
 	});
 
-	describe('#randomMoveEngine', function() {
-		it('should get random values', function() {
+	describe('#randomMoveEngine', function () {
+		it('should get random values', function () {
 			// given
 			const target = new getMoveableObject({
 				x: 120,
@@ -187,11 +206,11 @@ describe('ChaseObjectEngine', function () {
 
 			// when
 			const result = [];
-			for(var i = 0; i < 20; i++) {
+			for (var i = 0; i < 20; i++) {
 				result.push(randomMoveStrategy({
 					x: 90,
 					y: 60
-				},{
+				}, {
 					target: target,
 					tileSize: TILE_SIZE,
 					previousPosition: {
